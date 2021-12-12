@@ -12,6 +12,11 @@ let connectionString = {
     password: 'fa001bf3ef98593f6034dfd96321b106ee9f68dd9fe83a815c16a4d52106816b'
 }
 
+connectionString = {
+    connectionString: process.env.DATABASE_URL,
+    ssl:true
+}
+
 const pool = new Pool(connectionString);
 
 module.exports = pool;
