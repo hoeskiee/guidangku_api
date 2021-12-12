@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const host = '0.0.0.0';
 
 const app = express();
@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`App is listening on port http://localhost:${port}`)
+    console.log(`App is listening on port http://localhost:${PORT}}`)
 })
