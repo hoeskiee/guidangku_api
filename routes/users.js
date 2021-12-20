@@ -8,7 +8,7 @@ router.get('/', (request, response, next) => {
         (err, res) => {
             if (err) return next(err);
 
-            response.json(res);
+            response.json(res.rows);
         }
     );
 })
