@@ -17,3 +17,4 @@ connectionString = {
 }
 
 const pool = new Pool(connectionString);
+pool.on('connect', () => console.log('connected to db'));
