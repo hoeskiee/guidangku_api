@@ -13,10 +13,6 @@ app.use((err, req, res, next) => {
     res.json(err);
 });
 
-app.get('/', (req, res) => {
-    res.send("Welcome to Gudangku API");
-})
-
 app.listen(PORT, () => {
-    console.log(`App is listening on port http://localhost:${PORT}}`)
+    console.log(`App is listening on port http://localhost:${PORT}`)
 })
