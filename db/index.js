@@ -1,8 +1,7 @@
-const { user, host, database, port, password } = require('../secrets/dbconfiguration');
+// const { user, host, database, port, password } = require('../secrets/dbconfiguration');
 const { Pool } = require('pg');
-const { use } = require('../routes');
 
-const env = process.env.NODE_ENV || 'development';
+// const env = process.env.NODE_ENV || 'development';
 
 let connectionString = {
     user: 'ytgfhdvzrgwzag',
@@ -18,6 +17,3 @@ connectionString = {
 }
 
 const pool = new Pool(connectionString);
-
-module.exports = pool;
-

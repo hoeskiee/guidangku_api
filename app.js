@@ -14,7 +14,7 @@ app.use((err, req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.send("hello world");
+    res.send("Welcome to Gudangku API");
 })
 
 app.listen(PORT, () => {

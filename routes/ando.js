@@ -64,7 +64,7 @@ router.post('/', (request, response, next) => {
     )
 });
 
-router.put('/:id', (request, response, next) => {
+router.put('/:id', (request, response, next) => { 
     const { id } = request.params;
     const { name, color, size, price, stock } = request.body;
 
