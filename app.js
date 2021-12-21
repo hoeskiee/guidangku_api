@@ -15,7 +15,7 @@ app.use((err, req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.send("Welcome to Gudangku API");
+    res.send("Welcome to GudangAPI");
 })
 
 app.listen(PORT, () => {
