@@ -1,6 +1,6 @@
 // const { user, host, database, port, password } = require('../secrets/dbconfiguration');
 const { Pool } = require('pg');
-const fs = require('fs');
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
 // const env = process.env.NODE_ENV || 'development';
 
