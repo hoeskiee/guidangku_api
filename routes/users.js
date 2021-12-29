@@ -16,10 +16,10 @@ router.get('/', (request, response, next) => {
 
 //POST method with pgcrypt
 router.post('/', (request, response, next) => {
-    const { name, phone, email, password } = request.body;
+    const { name, phone, email, password, role } = request.body;
 
-    pool.query(`INSERT INTO users (name, phone, email, password) VALUES($1, $2, $3, crypt($4, gen_salt('md5')))`,
-    [ name, phone, email, password ],
+    pool.query(`INSERT INTO users (name, phone, email, password, role) VALUES($1, $2, $3, crypt($4, gen_salt('md5')), $5)`,
+    [ name, phone, email, password, role ],
     (err, res) => {
         if (err) return next(err);
 
