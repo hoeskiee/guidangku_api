@@ -3,19 +3,6 @@ const pool = require('../db');
 
 const router = Router();
 
-// router.get('/', (request, response, next) => {
-//     const name = request.query.name;
-
-//     pool.query(
-//         `SELECT * FROM ando WHERE name='${name}'`,
-//         (err, res) => {
-//             if (err) return next(err);
-
-//             response.json(res.rows);
-//         }
-//     )
-// });
-
 router.get('/', (request, response, next) => {
     pool.query(
         'SELECT * FROM ando ORDER BY id ASC',
@@ -27,34 +14,11 @@ router.get('/', (request, response, next) => {
     )
 });
 
-// router.get('/', (request, response, next) => {
-//     const { name, color, size, price, stock } = request.body;
-//     const choices = request.query;
-
-//     const keys = ['name', 'color', 'size', 'price', 'stock'];
-
-//     const fields = [];
-
-//     keys.forEach(key => {
-//         if(request.body[key]) fields.push(key);
-//         console.log(fields);
-//     });
-
-//     fields.forEach(field => {
-//         pool.query(`SELECT * FROM ando WHERE ${field}='${choices}`),
-//         (err, res) => {
-//             if (err) return next(err);
-
-//             response.json(res.rows);
-//         }
-//     })
-// })
-
 router.post('/', (request, response, next) => {
     const { name, color, size, price, stock } = request.body;
 
     pool.query(
-        'INSERT INTO ando(name, color, size, price, stock) VALUES($1, $2, $3, $4, $5)',
+        'INSERT INTO ando(imageURL, name, color, size, price, stock) VALUES($1, $2, $3, $4, $5)',
         [name, color, size, price, stock],
         (err, res) => {
             if (err) return next(err);
@@ -66,9 +30,9 @@ router.post('/', (request, response, next) => {
 
 router.put('/:id', (request, response, next) => { 
     const { id } = request.params;
-    const { name, color, size, price, stock } = request.body;
+    const { imageURL, name, color, size, price, stock } = request.body;
 
-    const keys = ['name', 'color', 'size', 'price', 'stock'];
+    const keys = ['imageURL', 'name', 'color', 'size', 'price', 'stock'];
 
     const fields = [];
 
