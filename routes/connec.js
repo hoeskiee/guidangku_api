@@ -18,8 +18,8 @@ router.post('/', (request, response, next) => {
     const { name, color, size, price, stock } = request.body;
 
     pool.query(
-        'INSERT INTO connec(imageURL, name, color, size, price, stock) VALUES($1, $2, $3, $4, $5)',
-        [name, color, size, price, stock],
+        'INSERT INTO connec(imageURL, name, color, size, price, stock) VALUES($1, $2, $3, $4, $5, $6)',
+        [imageURL, name, color, size, price, stock],
         (err, res) => {
             if (err) return next(err);
 
