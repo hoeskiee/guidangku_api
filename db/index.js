@@ -13,7 +13,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 // }
 
 const config = {
-    connectionString: 'postgres://ytgfhdvzrgwzag:fa001bf3ef98593f6034dfd96321b106ee9f68dd9fe83a815c16a4d52106816b@ec2-3-228-75-39.compute-1.amazonaws.com:5432/da9upeg3vpsg2?sslmode=require',
+    connectionString: 'postgres://eumhkzgw:VXK6s0_rLSB3FAgPghWAA_gfzAdfZCVw@john.db.elephantsql.com/eumhkzgw',
     // Beware! The ssl object is overwritten when parsing the connectionString
     // ssl: {
     //   rejectUnauthorized: false,
