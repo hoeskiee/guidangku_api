@@ -1,5 +1,6 @@
 CREATE TABLE ando(
     id serial,
+    imageURL character varying(250),
     name character varying(50),
     color character varying(50),
     size character varying(50),
@@ -9,6 +10,7 @@ CREATE TABLE ando(
 
 CREATE TABLE lubrene(
     id serial,
+    imageURL character varying(250),
     name character varying(50),
     color character varying(50),
     size character varying(50),
@@ -16,14 +18,22 @@ CREATE TABLE lubrene(
     stock int
 );
 
-INSERT INTO ando(name, color, size, price, stock)
-VALUES
-('Nice Like', 'Hitam', '36/40', 56900, 120),
-('Nice', 'Hitam', '36/40', 56900, 144),
-('Joice', 'Emas', '36/40', 109900, 60);
+CREATE TABLE duff(
+    id serial,
+    imageURL character varying(250),
+    name character varying(50),
+    color character varying(50),
+    size character varying(50),
+    price int,
+    stock int
+);
 
-INSERT INTO lubrene(name, color, size, price, stock)
-VALUES
-('Master-M', 'Hitam/Merah', '38/42', 54800, 120),
-('Bugari-GL', 'Coklat/Bata', '36/40', 72800, 144),
-('Bragi-M', 'Merah/Hitam', '38/42', 54800, 60);
+CREATE TABLE connec(
+    id serial,
+    imageURL character varying(250),
+    name character varying(50),
+    color character varying(50),
+    size character varying(50),
+    price int,
+    stock int
+);
