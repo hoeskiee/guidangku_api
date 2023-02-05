@@ -64,4 +64,8 @@ router.delete('/:id', (request, response, next) => {
     )
 })
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> 43a759cc7dc2df213badf34c55a1f2ea8f842c96

@@ -19,7 +19,8 @@ router.post('/', (request, response, next) => {
 
     pool.query(
         'INSERT INTO ando(imageURL, name, color, size, price, stock) VALUES($1, $2, $3, $4, $5, $6)',
-        [imageURL, name, color, size, price, stock],
+                [imageURL, name, color, size, price, stock],
+
         (err, res) => {
             if (err) return next(err);
 
