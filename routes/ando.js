@@ -15,7 +15,7 @@ router.get('/', (request, response, next) => {
 });
 
 router.post('/', (request, response, next) => {
-    const { name, color, size, price, stock } = request.body;
+    const { imageURL, name, color, size, price, stock } = request.body;
 
     pool.query(
         'INSERT INTO ando(imageURL, name, color, size, price, stock) VALUES($1, $2, $3, $4, $5, $6)',
